@@ -2,114 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grace and Grit Defense Academy</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
+      font-family: Arial, sans-serif;
       background-color: #111;
-      padding: 2em 1em;
-      text-align: center;
       color: #fff;
-    }
-    .logo {
-      max-height: 100px;
-      margin-bottom: 1em;
-    }
-    .hero {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    section {
-      padding: 2em 1em;
       text-align: center;
     }
-    .img-block img {
-      width: 100%;
-      max-width: 800px;
+
+    header {
+      background-color: #222;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 250px;
       height: auto;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background-image: url("images/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-top: 1em;
     }
-    .testimonials blockquote {
-      font-style: italic;
-      margin: 1em auto;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
       max-width: 700px;
+      margin: 0 auto 30px;
     }
-    .contact a {
-      color: #3366cc;
-      text-decoration: none;
-    }
+
     footer {
       background-color: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 2em 1em;
+      padding: 15px;
       font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="images/logo.jpg" alt="Grace and Grit Logo" class="logo" />
-    <h1>Grace and Grit Defense Academy</h1>
-    <p>Empowering communities through critical-response education</p>
+    <img src="images/logo.jpg" alt="Grace and Grit Logo" />
   </header>
 
-  <img class="hero" src="https://images.unsplash.com/photo-1581091870620-1e7b9c7b9f9e?auto=format&fit=crop&w=1600&q=80" alt="Hero Image - Strength and Unity" />
-
-  <section>
-    <h2>Training with Purpose</h2>
-    <p>We blend military discipline with compassionate care to prepare communities for decisive moments.</p>
-    <div class="img-block">
-      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1600&q=80" alt="Tactical Training in Action" />
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Grace and Grit Defense Academy</h1>
+      <p>Standing firm between safety and faith — protecting the vulnerable with conviction, compassion, and tactical readiness.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Compassion Meets Readiness</h2>
-    <p>Safety begins with trust. From church halls to daycare rooms, our training puts people first.</p>
-    <div class="img-block">
-      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80" alt="Community Interaction" />
-    </div>
-  </section>
-
-  <section>
-    <h2>Partnered for Impact</h2>
-    <p>Credibility matters. We align with national leaders in response training.</p>
-    <p><a href="https://www.alerrt.org/" target="_blank">Visit ALERRT.org</a></p>
-  </section>
-
-  <section>
-    <h2>What People Are Saying</h2>
-    <div class="testimonials">
-      <blockquote>"Grace and Grit changed how we think about safety." – Pastor R. Jenkins</blockquote>
-      <blockquote>"The training was practical, engaging, and deeply respectful." – Daycare Director K. Lewis</blockquote>
-    </div>
-  </section>
-
-  <section>
-    <h2>Schedule Your Training</h2>
-    <div class="img-block">
-      <iframe src="https://calendly.com/graceandgritacademy" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:contact@graceandgritacademy.org">contact@graceandgritacademy.org</a></p>
-    <p>Phone: (937) 555-1212</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Grace and Grit Defense Academy | Mission-Driven Protection & Preparedness</p>
+    &copy; 2025 Grace and Grit Defense Academy. All rights reserved.
   </footer>
+
 </body>
 </html>
