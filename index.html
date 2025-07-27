@@ -5,75 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grace and Grit Defense Academy</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f0f0f;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      text-align: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #fff;
     }
-    header {
-      background-color: #1a1a1a;
-      padding: 20px;
-    }
-    header img {
-      max-width: 240px;
-      height: auto;
+    .logo {
+      display: block;
+      margin: 2rem auto 1rem auto;
+      max-width: 200px;
+      border-radius: 10px;
     }
     .hero {
-      flex-grow: 1;
-      background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...") no-repeat center center;
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBD...') no-repeat center center;
       background-size: cover;
+      height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
-      position: relative;
+      text-align: center;
+      padding: 0 2rem;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
     }
-    .hero-overlay {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-    }
-    .hero-overlay h1 {
-      font-size: 2.8em;
-      margin-bottom: 15px;
-    }
-    .hero-overlay p {
-      font-size: 1.3em;
-    }
-    footer {
-      background-color: #1a1a1a;
-      padding: 20px;
-      font-size: 0.9em;
+    .tagline {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 2rem 0;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Grace and Grit Logo" />
-  </header>
-
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>Grace and Grit Defense Academy</h1>
-      <p>Protecting the vulnerable with conviction, compassion, and tactical readiness.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Grace and Grit Defense Academy. All rights reserved.
-  </footer>
-
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBD...your-logo-base64-encoded-string..." alt="Grace and Grit Logo" class="logo" />
+  <div class="hero">
+    <h1>Empowering Communities Through Preparedness</h1>
+  </div>
+  <div class="tagline">
+    Free Critical-Response Training for Churches & Daycare Centers
+  </div>
 </body>
 </html>
