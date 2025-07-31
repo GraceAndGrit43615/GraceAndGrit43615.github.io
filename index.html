@@ -4,116 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace & Grit Defense Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* Reset default styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Body with subtle gradient background */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f0f0, #e0e6f0);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Container for content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Logo section */
         .logo {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            background-color: #ADD8E6; /* Baby Blue */
-            color: #FFD700; /* Gold */
+            padding: 30px;
+            background: #ADD8E6; /* Baby Blue */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
-        .logo svg {
-            width: 100px;
-            height: 100px;
+
+        .logo svg.lion {
+            width: 120px;
+            height: 120px;
             margin-right: 20px;
+            transition: transform 0.3s ease;
         }
+
+        .logo svg.lion:hover {
+            transform: scale(1.1);
+        }
+
         .logo h1 {
-            font-family: cursive;
+            font-family: 'Great Vibes', cursive; /* Script lettering */
             font-size: 48px;
+            color: #FFD700; /* Gold */
             margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
+
         .logo p {
-            font-family: sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 18px;
+            color: #333;
             margin: 5px 0 0 0;
         }
-        .mission {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
+
+        .logo .icon-svg {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
         }
-        .mission h2 {
+
+        /* Section styles */
+        .mission, .contact, .graphics, .statistics, .survivor-quotes, .resources {
+            background: #fff;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .mission:hover, .contact:hover, .graphics:hover, .statistics:hover, .survivor-quotes:hover, .resources:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive; /* Script lettering */
+            font-size: 36px;
             color: #FFD700; /* Gold */
-        }
-        .contact {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .contact h2 {
-            color: #FFD700; /* Gold */
-        }
-        .graphics {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px 0;
-        }
-        .graphics div {
+            margin-bottom: 15px;
             text-align: center;
         }
-        .statistics {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
+
+        /* Mission section */
+        .mission p {
+            margin-bottom: 15px;
+            font-size: 16px;
         }
-        .statistics h2 {
+
+        /* Contact section */
+        .contact a {
+            color: #ADD8E6; /* Baby Blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
             color: #FFD700; /* Gold */
         }
-        .survivor-quotes {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
+
+        /* Graphics section */
+        .graphics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
         }
-        .survivor-quotes h2 {
+
+        .graphics div h3 {
+            font-size: 48px;
             color: #FFD700; /* Gold */
+            margin-bottom: 10px;
         }
+
+        .graphics div p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .graphics img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Statistics section */
+        .statistics ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .statistics li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .statistics li::before {
+            content: '•';
+            color: #FFD700; /* Gold */
+            font-size: 20px;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Survivor quotes section */
         .survivor-quotes blockquote {
-            margin: 0;
-            padding: 10px;
+            margin: 15px 0;
+            padding: 15px 20px;
             border-left: 5px solid #FFD700; /* Gold */
+            background: #f9f9f9;
+            border-radius: 5px;
         }
-        .resources {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
+
+        .survivor-quotes footer {
+            font-style: italic;
+            color: #ADD8E6; /* Baby Blue */
+            margin-top: 5px;
         }
-        .resources h2 {
+
+        /* Resources section */
+        .resources a {
+            color: #ADD8E6; /* Baby Blue */
+            text-decoration: none;
+        }
+
+        .resources a:hover {
             color: #FFD700; /* Gold */
+        }
+
+        .resources ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .resources li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .resources li::before {
+            content: '→';
+            color: #FFD700; /* Gold */
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo svg.lion {
+                margin: 0 0 20px 0;
+            }
+
+            .logo .icon-svg {
+                display: none;
+            }
+
+            .graphics {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <svg viewBox="0 0 1708.6 2205.2" xmlns="[invalid url, do not cite]
-                <polygon points="683.8,2190.6 733.1,2056.6 722.8,1898.3 844.6,1739.8 969.6,1899.3 962.3,2066.6 1011.8,2188.6 1029.1,2053.8 1064.1,1921.8 990.8,1582.1 896.8,1511.3 789.8,1511.3 695.1,1579.8 628.3,1919.8 665.1,2054.1 " fill="#FFD700" />
-                <!-- Add more polygons as needed for the lion head -->
+            <svg class="lion" viewBox="0 0 1708.6 2205.2" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="683.8,2190.6 733.1,2056.6 722.8,1898.3 844.6,1739.8 969.6,1899.3 962.3,2066.6 1011.8,2188.6 1029.1,2053.8 1064.1,1921.8 990.8,1582.1 896.8,1511.3 789.8,1511.3 695.1,1579.8 628.3,1919.8 665.1,2054.1" fill="#FFD700" />
+                <!-- Simplified for clarity; add more polygons for detailed lion head if available -->
             </svg>
             <div>
                 <h1>Grace & Grit Defense Academy</h1>
                 <p>A.L.E.R.R.T. Certified Instructor</p>
                 <p>C.R.A.S.E. Certified Instructor</p>
             </div>
-            <svg width="50" height="50" viewBox="0 0 100 100" xmlns="[invalid url, do not cite]
+            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50,10 C25,10 10,25 10,50 C10,75 25,90 50,90 C75,90 90,75 90,50 C90,25 75,10 50,10 Z" fill="#FFD700" />
             </svg>
-            <svg width="50" height="50" viewBox="0 0 100 100" xmlns="[invalid url, do not cite]
-                <line x1="0" y1="100" x2="100" y2="0" stroke-width="1" stroke="#FFD700"/>
-                <line x1="0" y1="0" x2="100" y2="100" stroke-width="1" stroke="#FFD700"/>
+            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="100" x2="100" y2="0" stroke-width="10" stroke="#FFD700"/>
+                <line x1="0" y1="0" x2="100" y2="100" stroke-width="10" stroke="#FFD700"/>
             </svg>
         </div>
         <section class="mission">
@@ -128,15 +261,18 @@
         </section>
         <section class="graphics">
             <div>
-                <h3 style="font-size: 48px; color: #FFD700;">A</h3>
+                <img src="https://via.placeholder.com/300x150.png?text=Avoid+Training" alt="Avoid Training">
+                <h3>A</h3>
                 <p>Avoid</p>
             </div>
             <div>
-                <h3 style="font-size: 48px; color: #FFD700;">D</h3>
+                <img src="https://via.placeholder.com/300x150.png?text=Deny+Training" alt="Deny Training">
+                <h3>D</h3>
                 <p>Deny</p>
             </div>
             <div>
-                <h3 style="font-size: 48px; color: #FFD700;">D</h3>
+                <img src="https://via.placeholder.com/300x150.png?text=Defend+Training" alt="Defend Training">
+                <h3>D</h3>
                 <p>Defend</p>
             </div>
         </section>
@@ -180,16 +316,27 @@
             <h2>Resources</h2>
             <p>For more information on active shooter response and training, visit:</p>
             <ul>
-                <li><a href="[invalid url, do not cite]
-                <li><a href="[invalid url, do not cite]
-                <li><a href="[invalid url, do not cite]
+                <li><a href="https://www.alerrt.org">ALERRT Official Website</a></li>
+                <li><a href="https://www.fbi.gov/survive/active-shooter">FBI Active Shooter Resources</a></li>
+                <li><a href="https://www.ready.gov/active-shooter">Ready.gov Active Shooter Preparedness</a></li>
             </ul>
             <p>Additionally, watch these pertinent videos:</p>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=example1">Video 1: Active Shooter Response</a></li>
-                <li><a href="https://www.youtube.com/watch?v=example2">Video 2: ALERRT Training Overview</a></li>
+                <li><a href="https://www.youtube.com/watch?v=5VcSwejU2D0">Run. Hide. Fight. – Active Shooter Response</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DFW_9-2v3oQ">ALERRT Training Overview</a></li>
             </ul>
         </section>
     </div>
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
