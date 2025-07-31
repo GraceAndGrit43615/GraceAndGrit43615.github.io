@@ -29,6 +29,28 @@
             padding: 20px;
         }
 
+        /* Navigation bar */
+        .nav {
+            background: #ADD8E6; /* Baby Blue */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #FFD700; /* Gold */
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            color: #333;
+        }
+
         /* Logo section */
         .logo {
             display: flex;
@@ -53,7 +75,7 @@
         }
 
         .logo h1 {
-            font-family: 'Great Vibes', cursive; /* Script lettering */
+            font-family: 'Great Vibes', cursive;
             font-size: 48px;
             color: #FFD700; /* Gold */
             margin: 0;
@@ -65,12 +87,6 @@
             font-size: 18px;
             color: #333;
             margin: 5px 0 0 0;
-        }
-
-        .logo .icon-svg {
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
         }
 
         /* Section styles */
@@ -88,7 +104,7 @@
         }
 
         h2 {
-            font-family: 'Great Vibes', cursive; /* Script lettering */
+            font-family: 'Great Vibes', cursive;
             font-size: 36px;
             color: #FFD700; /* Gold */
             margin-bottom: 15px;
@@ -211,8 +227,9 @@
                 margin: 0 0 20px 0;
             }
 
-            .logo .icon-svg {
-                display: none;
+            .nav a {
+                display: block;
+                margin: 10px 0;
             }
 
             .graphics {
@@ -231,35 +248,35 @@
 </head>
 <body>
     <div class="container">
+        <nav class="nav">
+            <a href="#mission">Mission</a>
+            <a href="#contact">Contact</a>
+            <a href="#graphics">Training</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#survivor-quotes">Survivor Quotes</a>
+            <a href="#resources">Resources</a>
+        </nav>
         <div class="logo">
-            <svg class="lion" viewBox="0 0 1708.6 2205.2" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="683.8,2190.6 733.1,2056.6 722.8,1898.3 844.6,1739.8 969.6,1899.3 962.3,2066.6 1011.8,2188.6 1029.1,2053.8 1064.1,1921.8 990.8,1582.1 896.8,1511.3 789.8,1511.3 695.1,1579.8 628.3,1919.8 665.1,2054.1" fill="#FFD700" />
-                <!-- Simplified for clarity; add more polygons for detailed lion head if available -->
+            <svg class="lion" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100,20 C60,20 30,50 30,90 C30,130 60,160 100,160 C140,160 170,130 170,90 C170,50 140,20 100,20 Z M80,60 L90,80 L110,80 L120,60 M80,120 L90,140 L110,140 L120,120" fill="#FFD700" stroke="#333" stroke-width="5"/>
             </svg>
             <div>
                 <h1>Grace & Grit Defense Academy</h1>
                 <p>A.L.E.R.R.T. Certified Instructor</p>
                 <p>C.R.A.S.E. Certified Instructor</p>
             </div>
-            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50,10 C25,10 10,25 10,50 C10,75 25,90 50,90 C75,90 90,75 90,50 C90,25 75,10 50,10 Z" fill="#FFD700" />
-            </svg>
-            <svg class="icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0" y1="100" x2="100" y2="0" stroke-width="10" stroke="#FFD700"/>
-                <line x1="0" y1="0" x2="100" y2="100" stroke-width="10" stroke="#FFD700"/>
-            </svg>
         </div>
-        <section class="mission">
+        <section id="mission" class="mission">
             <h2>Mission Statement</h2>
             <p>At Grace & Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training) and Citizen Response training. Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders’ experiences—one as a United States Marine and the other as a Registered Nurse.</p>
             <p>Our Marine Corps background instills discipline, leadership, and a deep sense of duty, while our RN expertise brings a profound understanding of care, crisis management, and human resilience. Together, we leverage these strengths to deliver exceptional training, with a particular emphasis on our ALERRT Train-the-Trainer certification—a nationally recognized, research-based program trusted by law enforcement and civilians alike for its rigorous standards and proven effectiveness in preparing individuals to respond to critical incidents. This certification underscores our credibility and commitment to delivering the highest quality instruction.</p>
             <p>We are passionate about serving our community by offering this training at no cost to churches and daycare facilities, ensuring that financial barriers do not prevent access to essential preparedness education. Our initial goal is to educate as many local organizations as possible, fostering safer environments where faith and care thrive. At Grace & Grit Defense Academy, we believe that serving others is a calling, and we are dedicated to building stronger, more resilient communities through education, empowerment, and unwavering commitment to the greater good.</p>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Contact Information</h2>
             <p>For questions or to schedule training, please email: <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a></p>
         </section>
-        <section class="graphics">
+        <section id="graphics" class="graphics">
             <div>
                 <img src="https://via.placeholder.com/300x150.png?text=Avoid+Training" alt="Avoid Training">
                 <h3>A</h3>
@@ -276,7 +293,7 @@
                 <p>Defend</p>
             </div>
         </section>
-        <section class="statistics">
+        <section id="statistics" class="statistics">
             <h2>Statistics on Mass Attacks (2016-2020)</h2>
             <p>According to the U.S. Secret Service National Threat Assessment Center, between 2016 and 2020, there were 173 mass attacks in public spaces.</p>
             <ul>
@@ -289,7 +306,7 @@
                 <li><strong>Over 50%</strong> of the attackers exhibited symptoms of mental health issues, including depression, psychotic symptoms, and suicidality.</li>
             </ul>
         </section>
-        <section class="survivor-quotes">
+        <section id="survivor-quotes" class="survivor-quotes">
             <h2>Survivor Quotes</h2>
             <blockquote>
                 <p>“Trauma can't disappear, but it can be managed. You're entitled to scream, cry, break down, mourn and grieve, it's a part of healing.”</p>
@@ -312,7 +329,7 @@
                 <footer>— Isabelle Laymance, Santa Fe High School survivor</footer>
             </blockquote>
         </section>
-        <section class="resources">
+        <section id="resources" class="resources">
             <h2>Resources</h2>
             <p>For more information on active shooter response and training, visit:</p>
             <ul>
