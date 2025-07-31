@@ -1,123 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grace & Grit Defense Academy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #001F3F;
-      color: white;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    header h1 {
-      font-size: 36px;
-      color: gold;
-      margin: 0;
-    }
-    header .subtitle {
-      font-size: 24px;
-      color: white;
-    }
-    section {
-      padding: 20px;
-    }
-    .mission {
-      border-top: 2px solid gold;
-      padding-top: 20px;
-    }
-    .highlight {
-      background-color: #FFD700;
-      color: #001F3F;
-      font-weight: bold;
-      padding: 10px;
-      margin-top: 20px;
-      text-align: center;
-    }
-    .quote {
-      font-style: italic;
-      margin: 10px 0;
-    }
-    .images {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .images figure {
-      margin: 10px;
-      text-align: center;
-    }
-    .images img {
-      width: 250px;
-      height: auto;
-      border: 2px solid white;
-    }
-    footer {
-      background-color: #002B5C;
-      padding: 15px;
-      text-align: center;
-      font-size: 16px;
-    }
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace & Grit Defense Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #ADD8E6; /* Baby Blue */
+            color: #FFD700; /* Gold */
+        }
+        .logo svg {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .logo h1 {
+            font-family: cursive;
+            font-size: 48px;
+            margin: 0;
+        }
+        .logo p {
+            font-family: sans-serif;
+            font-size: 18px;
+            margin: 5px 0 0 0;
+        }
+        .mission {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .mission h2 {
+            color: #FFD700; /* Gold */
+        }
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .contact h2 {
+            color: #FFD700; /* Gold */
+        }
+        .graphics {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+        .graphics div {
+            text-align: center;
+        }
+        .statistics {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .statistics h2 {
+            color: #FFD700; /* Gold */
+        }
+        .survivor-quotes {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .survivor-quotes h2 {
+            color: #FFD700; /* Gold */
+        }
+        .survivor-quotes blockquote {
+            margin: 0;
+            padding: 10px;
+            border-left: 5px solid #FFD700; /* Gold */
+        }
+        .resources {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .resources h2 {
+            color: #FFD700; /* Gold */
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>A.L.E.R.R.T. + C.R.A.&E*</h1>
-    <div class="subtitle">Grace & Grit Defense Academy Certified Instructor</div>
-    <img src="data:image/png;base64,[BASE64_LION_GLOBE]" alt="Lion and Globe Logo" style="margin-top:10px;" width="100">
-  </header>
-
-  <section class="mission">
-    <h2 style="color: gold;">Mission Statement</h2>
-    <p>
-      Grace and Grit Defense Academy equips civilians by preparing churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training).
-    </p>
-    <p>
-      Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders’ experiences – one as a United States Marine and the other as a Registered Nurse.
-    </p>
-  </section>
-
-  <div class="highlight">
-    AVOID • DENY • DEFEND
-    <br>
-    <img src="data:image/png;base64,[BASE64_AVOID_ICON]" alt="Avoid Deny Defend Icon" width="50" style="margin-top: 5px;">
-  </div>
-
-  <section>
-    <p>
-      Over half of mass attacks in the U.S. from 2016–2020 were in places of commerce, education, and worship.
-      <br><small>— U.S. Secret Service</small>
-    </p>
-    <p class="quote">“The training gave me the knowledge and confidence I needed to survive.”<br>— Lisa M., Mass attack survivor</p>
-  </section>
-
-  <section class="images">
-    <figure>
-      <img src="data:image/jpeg;base64,[BASE64_DAYCARE]" alt="Daycare Training">
-      <figcaption>Daycares</figcaption>
-    </figure>
-    <figure>
-      <img src="data:image/jpeg;base64,[BASE64_CHURCH]" alt="Church Training">
-      <figcaption>Churches</figcaption>
-    </figure>
-  </section>
-
-  <footer>
-    For information and to schedule training, email us at 
-    <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a>
-  </footer>
-
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 1708.6 2205.2" xmlns="[invalid url, do not cite]
+                <polygon points="683.8,2190.6 733.1,2056.6 722.8,1898.3 844.6,1739.8 969.6,1899.3 962.3,2066.6 1011.8,2188.6 1029.1,2053.8 1064.1,1921.8 990.8,1582.1 896.8,1511.3 789.8,1511.3 695.1,1579.8 628.3,1919.8 665.1,2054.1 " fill="#FFD700" />
+                <!-- Add more polygons as needed for the lion head -->
+            </svg>
+            <div>
+                <h1>Grace & Grit Defense Academy</h1>
+                <p>A.L.E.R.R.T. Certified Instructor</p>
+                <p>C.R.A.S.E. Certified Instructor</p>
+            </div>
+            <svg width="50" height="50" viewBox="0 0 100 100" xmlns="[invalid url, do not cite]
+                <path d="M50,10 C25,10 10,25 10,50 C10,75 25,90 50,90 C75,90 90,75 90,50 C90,25 75,10 50,10 Z" fill="#FFD700" />
+            </svg>
+            <svg width="50" height="50" viewBox="0 0 100 100" xmlns="[invalid url, do not cite]
+                <line x1="0" y1="100" x2="100" y2="0" stroke-width="1" stroke="#FFD700"/>
+                <line x1="0" y1="0" x2="100" y2="100" stroke-width="1" stroke="#FFD700"/>
+            </svg>
+        </div>
+        <section class="mission">
+            <h2>Mission Statement</h2>
+            <p>At Grace & Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training) and Citizen Response training. Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders’ experiences—one as a United States Marine and the other as a Registered Nurse.</p>
+            <p>Our Marine Corps background instills discipline, leadership, and a deep sense of duty, while our RN expertise brings a profound understanding of care, crisis management, and human resilience. Together, we leverage these strengths to deliver exceptional training, with a particular emphasis on our ALERRT Train-the-Trainer certification—a nationally recognized, research-based program trusted by law enforcement and civilians alike for its rigorous standards and proven effectiveness in preparing individuals to respond to critical incidents. This certification underscores our credibility and commitment to delivering the highest quality instruction.</p>
+            <p>We are passionate about serving our community by offering this training at no cost to churches and daycare facilities, ensuring that financial barriers do not prevent access to essential preparedness education. Our initial goal is to educate as many local organizations as possible, fostering safer environments where faith and care thrive. At Grace & Grit Defense Academy, we believe that serving others is a calling, and we are dedicated to building stronger, more resilient communities through education, empowerment, and unwavering commitment to the greater good.</p>
+        </section>
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>For questions or to schedule training, please email: <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a></p>
+        </section>
+        <section class="graphics">
+            <div>
+                <h3 style="font-size: 48px; color: #FFD700;">A</h3>
+                <p>Avoid</p>
+            </div>
+            <div>
+                <h3 style="font-size: 48px; color: #FFD700;">D</h3>
+                <p>Deny</p>
+            </div>
+            <div>
+                <h3 style="font-size: 48px; color: #FFD700;">D</h3>
+                <p>Defend</p>
+            </div>
+        </section>
+        <section class="statistics">
+            <h2>Statistics on Mass Attacks (2016-2020)</h2>
+            <p>According to the U.S. Secret Service National Threat Assessment Center, between 2016 and 2020, there were 173 mass attacks in public spaces.</p>
+            <ul>
+                <li><strong>Most attackers</strong> exhibited behavior that concerned family members, friends, neighbors, classmates, and co-workers prior to the attacks.</li>
+                <li><strong>Many attackers</strong> had a history of physically aggressive or intimidating behaviors, including prior violent criminal arrests or charges and domestic violence.</li>
+                <li><strong>50%</strong> of the attackers were motivated by grievances, such as personal, domestic, or workplace issues.</li>
+                <li><strong>Most attackers</strong> used firearms, and many possessed their firearms illegally.</li>
+                <li><strong>25%</strong> of the attackers subscribed to conspiracies or hateful ideologies, including anti-government, anti-Semitic, and misogynistic views.</li>
+                <li><strong>Many attackers</strong> experienced stressful events, such as family, employment, legal, or financial problems, and some had a specific triggering event.</li>
+                <li><strong>Over 50%</strong> of the attackers exhibited symptoms of mental health issues, including depression, psychotic symptoms, and suicidality.</li>
+            </ul>
+        </section>
+        <section class="survivor-quotes">
+            <h2>Survivor Quotes</h2>
+            <blockquote>
+                <p>“Trauma can't disappear, but it can be managed. You're entitled to scream, cry, break down, mourn and grieve, it's a part of healing.”</p>
+                <footer>— Jackie Hegarty, Sandy Hook survivor</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I wish someone would have told me that everyone grieves differently and there is no correct way to work through your healing journey.”</p>
+                <footer>— Dan Williams, Chardon High School survivor</footer>
+            </blockquote>
+            <blockquote>
+                <p>“Something I want to tell you, something I wish someone had told me, is that going through a school shooting is part of your history and part of your experiences, but it doesn't have to define you or become who you are.”</p>
+                <footer>— Natalie Barden, Sandy Hook survivor</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I encourage you to rock the boat. I encourage you to kick and scream and fight until they have no choice but to listen to you. Do whatever it takes.”</p>
+                <footer>— Bryanna Love, St. Louis Central Visual & Performing Arts High School survivor</footer>
+            </blockquote>
+            <blockquote>
+                <p>“Something I wish someone would have told me is that it's OK to not be OK. Never underestimate your trauma as it is a part of you.”</p>
+                <footer>— Isabelle Laymance, Santa Fe High School survivor</footer>
+            </blockquote>
+        </section>
+        <section class="resources">
+            <h2>Resources</h2>
+            <p>For more information on active shooter response and training, visit:</p>
+            <ul>
+                <li><a href="[invalid url, do not cite]
+                <li><a href="[invalid url, do not cite]
+                <li><a href="[invalid url, do not cite]
+            </ul>
+            <p>Additionally, watch these pertinent videos:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=example1">Video 1: Active Shooter Response</a></li>
+                <li><a href="https://www.youtube.com/watch?v=example2">Video 2: ALERRT Training Overview</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
