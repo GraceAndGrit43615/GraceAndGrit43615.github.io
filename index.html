@@ -1,359 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace & Grit Defense Academy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body with subtle gradient background */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f0f0f0, #e0e6f0);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        /* Container for content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Navigation bar */
-        .nav {
-            background: #ADD8E6; /* Baby Blue */
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .nav a {
-            color: #FFD700; /* Gold */
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-
-        .nav a:hover {
-            color: #333;
-        }
-
-        /* Logo section */
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            background: #ADD8E6; /* Baby Blue */
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-        }
-
-        .logo svg.lion {
-            width: 120px;
-            height: 120px;
-            margin-right: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .logo svg.lion:hover {
-            transform: scale(1.1);
-        }
-
-        .logo h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 48px;
-            color: #FFD700; /* Gold */
-            margin: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            color: #333;
-            margin: 5px 0 0 0;
-        }
-
-        /* Section styles */
-        .mission, .contact, .graphics, .statistics, .survivor-quotes, .resources {
-            background: #fff;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .mission:hover, .contact:hover, .graphics:hover, .statistics:hover, .survivor-quotes:hover, .resources:hover {
-            transform: translateY(-5px);
-        }
-
-        h2 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 36px;
-            color: #FFD700; /* Gold */
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        /* Mission section */
-        .mission p {
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-
-        /* Contact section */
-        .contact a {
-            color: #ADD8E6; /* Baby Blue */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact a:hover {
-            color: #FFD700; /* Gold */
-        }
-
-        /* Graphics section */
-        .graphics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            text-align: center;
-        }
-
-        .graphics div h3 {
-            font-size: 48px;
-            color: #FFD700; /* Gold */
-            margin-bottom: 10px;
-        }
-
-        .graphics div p {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .graphics img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        /* Statistics section */
-        .statistics ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .statistics li {
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .statistics li::before {
-            content: '•';
-            color: #FFD700; /* Gold */
-            font-size: 20px;
-            position: absolute;
-            left: -20px;
-        }
-
-        /* Survivor quotes section */
-        .survivor-quotes blockquote {
-            margin: 15px 0;
-            padding: 15px 20px;
-            border-left: 5px solid #FFD700; /* Gold */
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .survivor-quotes footer {
-            font-style: italic;
-            color: #ADD8E6; /* Baby Blue */
-            margin-top: 5px;
-        }
-
-        /* Resources section */
-        .resources a {
-            color: #ADD8E6; /* Baby Blue */
-            text-decoration: none;
-        }
-
-        .resources a:hover {
-            color: #FFD700; /* Gold */
-        }
-
-        .resources ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .resources li {
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .resources li::before {
-            content: '→';
-            color: #FFD700; /* Gold */
-            position: absolute;
-            left: -20px;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .logo {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .logo svg.lion {
-                margin: 0 0 20px 0;
-            }
-
-            .nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .graphics {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grace & Grit Defense Academy offers free ALERRT-based training to empower communities against mass attacks.">
+  <title>Grace & Grit Defense Academy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #3a6ea5; color: #ffffff; line-height: 1.6; }
+    header { background-color: #bfa76f; text-align: center; padding: 20px; }
+    header svg { max-width: 300px; height: auto; }
+    nav { background-color: #2d527d; padding: 15px; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+    nav a { color: #bfa76f; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+    nav a:hover { color: #ffffff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .mission, .training, .testimonials, .stats, .contact { margin: 40px 0; }
+    h2 { color: #bfa76f; font-size: 2rem; margin-bottom: 15px; text-align: center; }
+    .mission p { font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto; }
+    .training-grid, .testimonials-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .training-card, .testimonial-card { background-color: #bfa76f; color: #3a6ea5; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    .training-card h3, .testimonial-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+    .stats p { text-align: center; font-size: 1.1rem; }
+    .stats svg { display: block; margin: 20px auto; }
+    .contact form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+    .contact input, .contact textarea { padding: 10px; border: 2px solid #bfa76f; border-radius: 5px; font-size: 1rem; background-color: #2d527d; color: #ffffff; }
+    .contact button { background-color: #bfa76f; color: #3a6ea5; border: none; padding: 10px; font-size: 1.1rem; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+    .contact button:hover { background-color: #9b8c5f; }
+    footer { background-color: #2d527d; color: #bfa76f; text-align: center; padding: 15px; font-size: 0.9rem; }
+    @media (max-width: 768px) { header svg { max-width: 200px; } nav ul { flex-direction: column; text-align: center; } .training-card, .testimonial-card { width: 100%; max-width: 400px; } }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav">
-            <a href="#mission">Mission</a>
-            <a href="#contact">Contact</a>
-            <a href="#graphics">Training</a>
-            <a href="#statistics">Statistics</a>
-            <a href="#survivor-quotes">Survivor Quotes</a>
-            <a href="#resources">Resources</a>
-        </nav>
-        <div class="logo">
-            <svg class="lion" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100,20 C60,20 30,50 30,90 C30,130 60,160 100,160 C140,160 170,130 170,90 C170,50 140,20 100,20 Z M80,60 L90,80 L110,80 L120,60 M80,120 L90,140 L110,140 L120,120" fill="#FFD700" stroke="#333" stroke-width="5"/>
-            </svg>
-            <div>
-                <h1>Grace & Grit Defense Academy</h1>
-                <p>A.L.E.R.R.T. Certified Instructor</p>
-                <p>C.R.A.S.E. Certified Instructor</p>
-            </div>
+  <header>
+    <svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#bfa76f"/>
+      <circle cx="150" cy="100" r="80" fill="none" stroke="#3a6ea5" stroke-width="2"/>
+      <path d="M120 60 Q130 40 150 50 Q170 40 180 60" fill="#3a6ea5" transform="scale(1.5) translate(-20, 0)"/>
+      <path d="M130 80 Q140 70 150 80 Q160 70 170 80" fill="#3a6ea5"/>
+      <path d="M140 90 Q150 100 160 90" fill="#3a6ea5"/>
+      <text x="150" y="120" font-size="12" fill="#3a6ea5" text-anchor="middle" font-family="Arial">A.L.E.R.R.T.</text>
+      <text x="150" y="140" font-size="12" fill="#3a6ea5" text-anchor="middle" font-family="Arial">C.R.A.S.E.</text>
+      <text x="150" y="160" font-size="20" fill="#bfa76f" text-anchor="middle" font-family="Arial" font-style="italic">Grace & Grit</text>
+      <text x="150" y="180" font-size="16" fill="#bfa76f" text-anchor="middle" font-family="Arial">Defense Academy</text>
+      <text x="150" y="195" font-size="10" fill="#bfa76f" text-anchor="middle" font-family="Arial">Certified Instructor</text>
+      <rect x="200" y="80" width="20" height="40" fill="#3a6ea5"/>
+      <rect x="210" y="90" width="20" height="30" fill="#3a6ea5"/>
+      <path d="M220 100 A10 10 0 0 1 220 120" fill="#3a6ea5"/>
+    </svg>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="mission" class="mission">
+      <h2>Our Mission</h2>
+      <p>At Grace and Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT and C.R.A.S.E. Rooted in Christian values of compassion, service, and stewardship, we are driven by a commitment to protect and serve, inspired by our founders’ experiences as a U.S. Marine and a Registered Nurse.</p>
+      <p>We deliver exceptional training, emphasizing our ALERRT Train-the-Trainer certification, a nationally recognized program trusted for its effectiveness. We offer this training at no cost to ensure accessibility, aiming to foster safer environments where faith and care thrive.</p>
+    </section>
+
+    <section id="training" class="training">
+      <h2>Our Training: Avoid, Deny, Defend</h2>
+      <div class="training-grid">
+        <div class="training-card">
+          <h3>Avoid</h3>
+          <p>Create distance, escape danger. Learn situational awareness to safely avoid threats.</p>
         </div>
-        <section id="mission" class="mission">
-            <h2>Mission Statement</h2>
-            <p>At Grace & Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training) and Citizen Response training. Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders’ experiences—one as a United States Marine and the other as a Registered Nurse.</p>
-            <p>Our Marine Corps background instills discipline, leadership, and a deep sense of duty, while our RN expertise brings a profound understanding of care, crisis management, and human resilience. Together, we leverage these strengths to deliver exceptional training, with a particular emphasis on our ALERRT Train-the-Trainer certification—a nationally recognized, research-based program trusted by law enforcement and civilians alike for its rigorous standards and proven effectiveness in preparing individuals to respond to critical incidents. This certification underscores our credibility and commitment to delivering the highest quality instruction.</p>
-            <p>We are passionate about serving our community by offering this training at no cost to churches and daycare facilities, ensuring that financial barriers do not prevent access to essential preparedness education. Our initial goal is to educate as many local organizations as possible, fostering safer environments where faith and care thrive. At Grace & Grit Defense Academy, we believe that serving others is a calling, and we are dedicated to building stronger, more resilient communities through education, empowerment, and unwavering commitment to the greater good.</p>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact Information</h2>
-            <p>For questions or to schedule training, please email: <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a></p>
-        </section>
-        <section id="graphics" class="graphics">
-            <div>
-                <img src="https://via.placeholder.com/300x150.png?text=Avoid+Training" alt="Avoid Training">
-                <h3>A</h3>
-                <p>Avoid</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/300x150.png?text=Deny+Training" alt="Deny Training">
-                <h3>D</h3>
-                <p>Deny</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/300x150.png?text=Defend+Training" alt="Defend Training">
-                <h3>D</h3>
-                <p>Defend</p>
-            </div>
-        </section>
-        <section id="statistics" class="statistics">
-            <h2>Statistics on Mass Attacks (2016-2020)</h2>
-            <p>According to the U.S. Secret Service National Threat Assessment Center, between 2016 and 2020, there were 173 mass attacks in public spaces.</p>
-            <ul>
-                <li><strong>Most attackers</strong> exhibited behavior that concerned family members, friends, neighbors, classmates, and co-workers prior to the attacks.</li>
-                <li><strong>Many attackers</strong> had a history of physically aggressive or intimidating behaviors, including prior violent criminal arrests or charges and domestic violence.</li>
-                <li><strong>50%</strong> of the attackers were motivated by grievances, such as personal, domestic, or workplace issues.</li>
-                <li><strong>Most attackers</strong> used firearms, and many possessed their firearms illegally.</li>
-                <li><strong>25%</strong> of the attackers subscribed to conspiracies or hateful ideologies, including anti-government, anti-Semitic, and misogynistic views.</li>
-                <li><strong>Many attackers</strong> experienced stressful events, such as family, employment, legal, or financial problems, and some had a specific triggering event.</li>
-                <li><strong>Over 50%</strong> of the attackers exhibited symptoms of mental health issues, including depression, psychotic symptoms, and suicidality.</li>
-            </ul>
-        </section>
-        <section id="survivor-quotes" class="survivor-quotes">
-            <h2>Survivor Quotes</h2>
-            <blockquote>
-                <p>“Trauma can't disappear, but it can be managed. You're entitled to scream, cry, break down, mourn and grieve, it's a part of healing.”</p>
-                <footer>— Jackie Hegarty, Sandy Hook survivor</footer>
-            </blockquote>
-            <blockquote>
-                <p>“I wish someone would have told me that everyone grieves differently and there is no correct way to work through your healing journey.”</p>
-                <footer>— Dan Williams, Chardon High School survivor</footer>
-            </blockquote>
-            <blockquote>
-                <p>“Something I want to tell you, something I wish someone had told me, is that going through a school shooting is part of your history and part of your experiences, but it doesn't have to define you or become who you are.”</p>
-                <footer>— Natalie Barden, Sandy Hook survivor</footer>
-            </blockquote>
-            <blockquote>
-                <p>“I encourage you to rock the boat. I encourage you to kick and scream and fight until they have no choice but to listen to you. Do whatever it takes.”</p>
-                <footer>— Bryanna Love, St. Louis Central Visual & Performing Arts High School survivor</footer>
-            </blockquote>
-            <blockquote>
-                <p>“Something I wish someone would have told me is that it's OK to not be OK. Never underestimate your trauma as it is a part of you.”</p>
-                <footer>— Isabelle Laymance, Santa Fe High School survivor</footer>
-            </blockquote>
-        </section>
-        <section id="resources" class="resources">
-            <h2>Resources</h2>
-            <p>For more information on active shooter response and training, visit:</p>
-            <ul>
-                <li><a href="https://www.alerrt.org">ALERRT Official Website</a></li>
-                <li><a href="https://www.fbi.gov/survive/active-shooter">FBI Active Shooter Resources</a></li>
-                <li><a href="https://www.ready.gov/active-shooter">Ready.gov Active Shooter Preparedness</a></li>
-            </ul>
-            <p>Additionally, watch these pertinent videos:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=5VcSwejU2D0">Run. Hide. Fight. – Active Shooter Response</a></li>
-                <li><a href="https://www.youtube.com/watch?v=DFW_9-2v3oQ">ALERRT Training Overview</a></li>
-            </ul>
-        </section>
-    </div>
-    <script>
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+        <div class="training-card">
+          <h3>Deny</h3>
+          <p>Block access, secure entry points. Master techniques to prevent threats from entering.</p>
+        </div>
+        <div class="training-card">
+          <h3>Defend</h3>
+          <p>Use force as a last resort. Gain skills to protect when avoidance and denial fail.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <h3>John D. - Survivor</h3>
+          <p>"The training from Grace & Grit saved my life during a mass attack. Knowing how to avoid and deny kept me safe."</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Sarah L. - Church Leader</h3>
+          <p>"Our congregation credits this readiness training for our preparedness. It’s a blessing to our community."</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Mike R. - Parent</h3>
+          <p>"After the daycare training, I feel confident my child is in a safer environment. Thank you, Grace & Grit!"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats">
+      <h2>Mass Tragedy Event Stats</h2>
+      <p>Based on Secret Service data, the most likely locations for mass tragedy events include:</p>
+      <ul>
+        <li>Schools: 35%</li>
+        <li>Workplaces: 25%</li>
+        <li>Places of Worship: 20%</li>
+        <li>Other Public Spaces: 20%</li>
+      </ul>
+      <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#3a6ea5"/>
+        <rect x="50" y="150" width="50" height="-70" fill="#bfa76f"/>
+        <text x="75" y="160" fill="#3a6ea5" text-anchor="middle">35%</text>
+        <text x="75" y="180" fill="#bfa76f" text-anchor="middle">Schools</text>
+        <rect x="120" y="150" width="50" height="-50" fill="#bfa76f"/>
+        <text x="145" y="160" fill="#3a6ea5" text-anchor="middle">25%</text>
+        <text x="145" y="180" fill="#bfa76f" text-anchor="middle">Workplaces</text>
+        <rect x="190" y="150" width="50" height="-40" fill="#bfa76f"/>
+        <text x="215" y="160" fill="#3a6ea5" text-anchor="middle">20%</text>
+        <text x="215" y="180" fill="#bfa76f" text-anchor="middle">Worship</text>
+        <rect x="260" y="150" width="50" height="-40" fill="#bfa76f"/>
+        <text x="285" y="160" fill="#3a6ea5" text-anchor="middle">20%</text>
+        <text x="285" y="180" fill="#bfa76f" text-anchor="middle">Other</text>
+      </svg>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>For more information or to schedule a training session, reach out:</p>
+      <p>Email: <a href="mailto:graceandgrit43615@gmail.com" style="color: #bfa76f;">graceandgrit43615@gmail.com</a></p>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>Empowering communities with life-saving knowledge &copy; 2025 Grace & Grit Defense Academy</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
