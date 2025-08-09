@@ -1,3 +1,6 @@
+The user needs an AI code fixer to analyze and fix HTML code for a website, written in English.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grace & Grit Defense Academy - Elite Safety Training</title>
   <style>
+    /* CSS Reset and Variables (Improved for readability) */
     * {
       margin: 0;
       padding: 0;
@@ -26,15 +30,16 @@
       --shadow-heavy: rgba(0, 0, 0, 0.25);
     }
 
+    /* General Body Styles */
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
-      color: var(--primary);
+      color: var(--charcoal); /* Changed to charcoal for better readability */
       background: var(--white);
       overflow-x: hidden;
     }
 
-    /* Navigation */
+    /* Navigation Bar */
     .navbar {
       position: fixed;
       top: 0;
@@ -42,31 +47,31 @@
       background: rgba(31, 41, 55, 0.95);
       backdrop-filter: blur(20px);
       z-index: 1000;
-      padding: 20px 0;
+      padding: 15px 0; /* Reduced padding for better mobile view */
       transition: all 0.3s ease;
     }
 
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 20px; /* Reduced padding for better mobile view */
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 24px; /* Reduced font size for better mobile view */
       font-weight: 900;
       color: var(--white);
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px; /* Reduced letter spacing for better mobile view */
     }
 
     .nav-menu {
       display: flex;
       list-style: none;
-      gap: 40px;
+      gap: 20px; /* Reduced gap for better mobile view */
       align-items: center;
     }
 
@@ -75,24 +80,24 @@
       text-decoration: none;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
       transition: all 0.3s ease;
       position: relative;
     }
 
     .nav-link:hover {
-      color: var(--accent);
+      color: var(--accent-gold); /* Changed to accent-gold */
     }
 
     .nav-cta {
       background: var(--crimson);
       color: var(--white);
-      padding: 15px 30px;
-      border-radius: 0;
+      padding: 10px 20px; /* Reduced padding for better mobile view */
+      border-radius: 5px; /* Added border-radius */
       text-decoration: none;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
       transition: all 0.3s ease;
       border: 2px solid var(--crimson);
     }
@@ -146,7 +151,7 @@
       max-width: 1000px;
       position: relative;
       z-index: 2;
-      padding: 0 40px;
+      padding: 0 20px; /* Reduced padding for better mobile view */
     }
 
     .hero-badge {
@@ -157,7 +162,7 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50px;
       padding: 8px 20px;
-      margin-bottom: 32px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
       backdrop-filter: blur(10px);
     }
 
@@ -180,67 +185,28 @@
     }
 
     .hero h1 {
-      font-size: clamp(4rem, 10vw, 8rem);
+      font-size: clamp(3rem, 8vw, 6rem); /* Adjusted font size for better responsiveness */
       font-weight: 900;
       color: var(--white);
-      margin-bottom: 30px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
       line-height: 0.9;
       text-transform: uppercase;
-      letter-spacing: -3px;
+      letter-spacing: -2px; /* Reduced letter spacing for better mobile view */
     }
 
     .hero-tagline {
-      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem); /* Adjusted font size for better responsiveness */
       color: var(--accent-gold);
       font-weight: 600;
       font-style: italic;
-      margin-bottom: 24px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      max-width: 800px;
-      margin: 80px auto 0;
-    }
-
-    .hero-stat {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 16px;
-      padding: 32px 24px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-
-    .hero-stat:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .hero-stat-number {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--accent-gold);
-      margin-bottom: 8px;
-      line-height: 1;
-    }
-
-    .hero-stat-label {
-      font-size: 14px;
-      color: var(--white);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
     }
 
     .hero-description {
-      font-size: 20px;
+      font-size: clamp(1rem, 2vw, 1.2rem); /* Adjusted font size for better responsiveness */
       color: rgba(255, 255, 255, 0.8);
       line-height: 1.6;
-      margin-bottom: 60px;
+      margin-bottom: 40px; /* Reduced margin for better mobile view */
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
@@ -248,7 +214,7 @@
 
     .hero-actions {
       display: flex;
-      gap: 30px;
+      gap: 20px; /* Reduced gap for better mobile view */
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -256,11 +222,11 @@
     .btn-primary {
       background: var(--crimson);
       color: var(--white);
-      padding: 20px 40px;
-      font-size: 18px;
+      padding: 15px 30px; /* Reduced padding for better mobile view */
+      font-size: 16px; /* Reduced font size for better mobile view */
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
       text-decoration: none;
       transition: all 0.3s ease;
       border: 2px solid var(--crimson);
@@ -275,11 +241,11 @@
     .btn-secondary {
       background: transparent;
       color: var(--white);
-      padding: 20px 40px;
-      font-size: 18px;
+      padding: 15px 30px; /* Reduced padding for better mobile view */
+      font-size: 16px; /* Reduced font size for better mobile view */
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
       text-decoration: none;
       border: 2px solid var(--white);
       transition: all 0.3s ease;
@@ -291,9 +257,48 @@
       transform: translateY(-3px);
     }
 
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 20px; /* Reduced gap for better mobile view */
+      max-width: 800px;
+      margin: 40px auto 0; /* Reduced margin for better mobile view */
+    }
+
+    .hero-stat {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px 16px; /* Reduced padding for better mobile view */
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .hero-stat:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-stat-number {
+      font-size: 2rem; /* Reduced font size for better mobile view */
+      font-weight: 900;
+      color: var(--accent-gold);
+      margin-bottom: 4px; /* Reduced margin for better mobile view */
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 12px; /* Reduced font size for better mobile view */
+      color: var(--white);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
+    }
+
     /* Section Styles */
     .section {
-      padding: 120px 40px;
+      padding: 80px 20px; /* Reduced padding for better mobile view */
     }
 
     .container {
@@ -303,32 +308,32 @@
 
     .section-header {
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 40px; /* Reduced margin for better mobile view */
     }
 
     .section-badge {
       background: var(--accent-gold);
       color: var(--white);
-      padding: 8px 20px;
-      font-size: 12px;
+      padding: 6px 16px; /* Reduced padding for better mobile view */
+      font-size: 10px; /* Reduced font size for better mobile view */
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+      letter-spacing: 1px; /* Reduced letter spacing for better mobile view */
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
       display: inline-block;
     }
 
     .section-title {
-      font-size: clamp(3rem, 6vw, 4rem);
+      font-size: clamp(2rem, 4vw, 3rem); /* Adjusted font size for better responsiveness */
       font-weight: 900;
       color: var(--charcoal);
-      margin-bottom: 30px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
       text-transform: uppercase;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px; /* Reduced letter spacing for better mobile view */
     }
 
     .section-description {
-      font-size: 20px;
+      font-size: clamp(1rem, 2vw, 1.2rem); /* Adjusted font size for better responsiveness */
       color: var(--gray);
       line-height: 1.6;
       max-width: 700px;
@@ -351,48 +356,48 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 20px; /* Reduced gap for better mobile view */
     }
 
     .stat-card {
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px 16px; /* Reduced padding for better mobile view */
       background: var(--white);
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      border-radius: 15px; /* Reduced border-radius for better mobile view */
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Reduced box-shadow for better mobile view */
       transition: all 0.3s ease;
       border-top: 4px solid var(--accent-gold);
     }
 
     .stat-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Reduced box-shadow for better mobile view */
     }
 
     .stat-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
+      font-size: 2rem; /* Reduced font size for better mobile view */
+      margin-bottom: 10px; /* Reduced margin for better mobile view */
       display: block;
     }
 
     .stat-number {
-      font-size: 3.5rem;
+      font-size: 2.5rem; /* Reduced font size for better mobile view */
       font-weight: 900;
       color: var(--crimson);
-      margin-bottom: 12px;
+      margin-bottom: 8px; /* Reduced margin for better mobile view */
       line-height: 1;
     }
 
     .stat-label {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--charcoal);
-      margin-bottom: 8px;
+      margin-bottom: 4px; /* Reduced margin for better mobile view */
     }
 
     .stat-source {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       color: #6b7280;
       font-style: italic;
     }
@@ -404,48 +409,48 @@
 
     .programs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 20px; /* Reduced gap for better mobile view */
     }
 
     .program-card {
       background: var(--white);
-      padding: 50px;
+      padding: 30px; /* Reduced padding for better mobile view */
       border-left: 5px solid var(--secondary-blue);
       transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Reduced box-shadow for better mobile view */
     }
 
     .program-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Reduced box-shadow for better mobile view */
     }
 
     .program-title {
-      font-size: 28px;
+      font-size: 20px; /* Reduced font size for better mobile view */
       font-weight: 900;
       color: var(--charcoal);
-      margin-bottom: 20px;
+      margin-bottom: 15px; /* Reduced margin for better mobile view */
       text-transform: uppercase;
     }
 
     .program-description {
-      font-size: 16px;
+      font-size: 14px;
       color: var(--gray);
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
     }
 
     .program-features {
       list-style: none;
-      margin-bottom: 40px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
     }
 
     .program-features li {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       color: var(--charcoal);
-      margin-bottom: 10px;
-      padding-left: 25px;
+      margin-bottom: 8px; /* Reduced margin for better mobile view */
+      padding-left: 20px; /* Reduced padding for better mobile view */
       position: relative;
       font-weight: 600;
     }
@@ -461,13 +466,14 @@
     .program-link {
       background: var(--secondary-blue);
       color: var(--white);
-      padding: 15px 30px;
+      padding: 10px 20px; /* Reduced padding for better mobile view */
       text-decoration: none;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px; /* Reduced letter spacing for better mobile view */
       transition: all 0.3s ease;
       display: inline-block;
+      font-size: 12px; /* Reduced font size for better mobile view */
     }
 
     .program-link:hover {
@@ -481,48 +487,48 @@
 
     .mission-content {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr; /* Stack columns on mobile */
+      gap: 40px; /* Reduced gap for better mobile view */
       align-items: start;
     }
 
     .mission-text {
-      font-size: 16px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.6;
       color: #4b5563;
     }
 
     .mission-text p {
-      margin-bottom: 24px;
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
     }
 
     .mission-text p:first-child {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--charcoal);
     }
 
     .founders-card {
       background: var(--white);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 40px var(--shadow-light);
+      border-radius: 15px; /* Reduced border-radius for better mobile view */
+      padding: 20px; /* Reduced padding for better mobile view */
+      box-shadow: 0 5px 20px var(--shadow-light); /* Reduced box-shadow for better mobile view */
       border: 1px solid #e5e7eb;
     }
 
     .founders-title {
-      font-size: 24px;
+      font-size: 20px; /* Reduced font size for better mobile view */
       font-weight: 800;
       color: var(--charcoal);
-      margin-bottom: 32px;
+      margin-bottom: 20px; /* Reduced margin for better mobile view */
       text-align: center;
     }
 
     .founder {
       background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 20px;
+      border-radius: 12px; /* Reduced border-radius for better mobile view */
+      padding: 16px; /* Reduced padding for better mobile view */
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
       color: var(--white);
     }
 
@@ -531,21 +537,21 @@
     }
 
     .founder-role {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 4px; /* Reduced margin for better mobile view */
       color: var(--accent-gold);
     }
 
     .founder-credentials {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       opacity: 0.9;
-      margin-bottom: 12px;
+      margin-bottom: 8px; /* Reduced margin for better mobile view */
       font-weight: 500;
     }
 
     .founder-description {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       line-height: 1.6;
       opacity: 0.95;
     }
@@ -566,42 +572,42 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 20px; /* Reduced gap for better mobile view */
     }
 
     .feature-card {
       background: var(--white);
-      border-radius: 20px;
-      padding: 40px;
+      border-radius: 15px; /* Reduced border-radius for better mobile view */
+      padding: 20px; /* Reduced padding for better mobile view */
       text-align: center;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Reduced box-shadow for better mobile view */
       transition: all 0.3s ease;
       border-top: 4px solid var(--accent-gold);
     }
 
     .feature-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Reduced box-shadow for better mobile view */
     }
 
     .feature-icon {
-      font-size: 3rem;
-      margin-bottom: 24px;
+      font-size: 2rem; /* Reduced font size for better mobile view */
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
       display: block;
     }
 
     .feature-title {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--charcoal);
-      margin-bottom: 16px;
+      margin-bottom: 8px; /* Reduced margin for better mobile view */
     }
 
     .feature-description {
-      font-size: 16px;
+      font-size: 14px;
       color: #6b7280;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     /* Testimonials Section */
@@ -611,40 +617,40 @@
 
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 20px; /* Reduced gap for better mobile view */
     }
 
     .testimonial-card {
       background: var(--white);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 40px var(--shadow-light);
+      border-radius: 15px; /* Reduced border-radius for better mobile view */
+      padding: 20px; /* Reduced padding for better mobile view */
+      box-shadow: 0 5px 20px var(--shadow-light); /* Reduced box-shadow for better mobile view */
       border: 1px solid #e5e7eb;
       transition: all 0.3s ease;
       position: relative;
     }
 
     .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 60px var(--shadow-medium);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px var(--shadow-medium); /* Reduced box-shadow for better mobile view */
     }
 
     .testimonial-quote {
-      font-size: 4rem;
+      font-size: 3rem; /* Reduced font size for better mobile view */
       color: var(--accent-gold);
       position: absolute;
-      top: 20px;
-      left: 30px;
+      top: 10px; /* Reduced top for better mobile view */
+      left: 15px; /* Reduced left for better mobile view */
       line-height: 1;
       opacity: 0.3;
     }
 
     .testimonial-content {
-      font-size: 16px;
+      font-size: 14px;
       color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 24px;
+      line-height: 1.6;
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
       font-style: italic;
       position: relative;
       z-index: 2;
@@ -652,18 +658,18 @@
 
     .testimonial-author {
       border-top: 1px solid #e5e7eb;
-      padding-top: 20px;
+      padding-top: 15px; /* Reduced padding for better mobile view */
     }
 
     .testimonial-name {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--charcoal);
-      margin-bottom: 4px;
+      margin-bottom: 4px; /* Reduced margin for better mobile view */
     }
 
     .testimonial-role {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       color: #6b7280;
     }
 
@@ -680,39 +686,39 @@
 
     .cta .section-description {
       color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 48px;
+      margin-bottom: 32px; /* Reduced margin for better mobile view */
     }
 
     /* Footer */
     .footer {
-      background: var(--primary);
+      background: var(--charcoal); /* Changed to charcoal */
       color: var(--white);
-      padding: 80px 40px 40px;
+      padding: 40px 20px; /* Reduced padding for better mobile view */
     }
 
     .footer-content {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 50px;
-      margin-bottom: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted minmax for better mobile view */
+      gap: 30px; /* Reduced gap for better mobile view */
+      margin-bottom: 30px; /* Reduced margin for better mobile view */
     }
 
     .footer-section h3 {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 900;
-      color: var(--gold);
-      margin-bottom: 25px;
+      color: var(--accent-gold); /* Changed to accent-gold */
+      margin-bottom: 16px; /* Reduced margin for better mobile view */
       text-transform: uppercase;
     }
 
     .footer-section p,
     .footer-section li {
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.6;
-      margin-bottom: 10px;
+      margin-bottom: 8px; /* Reduced margin for better mobile view */
     }
 
     .footer-section ul {
@@ -726,21 +732,21 @@
     }
 
     .footer-section a:hover {
-      color: var(--accent);
+      color: var(--accent-gold); /* Changed to accent-gold */
     }
 
     .footer-bottom {
       text-align: center;
-      padding-top: 40px;
+      padding-top: 20px; /* Reduced padding for better mobile view */
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       color: rgba(255, 255, 255, 0.5);
-      font-size: 14px;
+      font-size: 12px; /* Reduced font size for better mobile view */
     }
 
     /* Animations */
     .fade-in {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px); /* Reduced transform for better mobile view */
       transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -751,7 +757,7 @@
 
     .slide-in-left {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-30px); /* Reduced transform for better mobile view */
       transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -762,7 +768,7 @@
 
     .slide-in-right {
       opacity: 0;
-      transform: translateX(50px);
+      transform: translateX(30px); /* Reduced transform for better mobile view */
       transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -771,7 +777,7 @@
       transform: translateX(0);
     }
 
-    /* Responsive */
+    /* Responsive Styles */
     @media (max-width: 768px) {
       .mobile-toggle {
         display: block;
@@ -782,10 +788,10 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--primary);
+        background: var(--primary-blue); /* Changed to primary-blue */
         flex-direction: column;
-        padding: 40px;
-        gap: 20px;
+        padding: 20px; /* Reduced padding for better mobile view */
+        gap: 10px; /* Reduced gap for better mobile view */
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
@@ -799,20 +805,20 @@
       }
 
       .nav-container {
-        padding: 0 20px;
+        padding: 0 10px; /* Reduced padding for better mobile view */
       }
 
       .hero {
-        padding: 0 20px;
+        padding: 0 10px; /* Reduced padding for better mobile view */
       }
 
       .section {
-        padding: 80px 20px;
+        padding: 40px 10px; /* Reduced padding for better mobile view */
       }
 
       .mission-content {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 30px; /* Reduced gap for better mobile view */
       }
 
       .hero-actions {
@@ -823,460 +829,19 @@
       .btn-primary,
       .btn-secondary {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px; /* Reduced max-width for better mobile view */
         text-align: center;
+        padding: 12px 24px; /* Further reduced padding for better mobile view */
+        font-size: 14px; /* Further reduced font size for better mobile view */
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="logo">Grace & Grit</div>
-      <button class="mobile-toggle" id="mobile-toggle">☰</button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#mission" class="nav-link">Mission</a></li>
-        <li><a href="#stats" class="nav-link">Stats</a></li>
-        <li><a href="#programs" class="nav-link">Programs</a></li>
-        <li><a href="mailto:graceandgrit43615@gmail.com" class="nav-cta">Get Training</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <div class="hero-badge-icon">✓</div>
-        <span class="hero-badge-text">ALERRT Certified Training</span>
-      </div>
-      <h1>Grace & Grit Defense Academy</h1>
-      <p class="hero-tagline">"Empowering Communities. Protecting Lives."</p>
-      <p class="hero-description">
-        Faith-based safety training for churches and daycare centers. Our ALERRT-certified instructors provide life-saving skills at no cost to your community. Rooted in Christian values with military precision and medical expertise.
-      </p>
-      <div class="hero-actions">
-        <a href="mailto:graceandgrit43615@gmail.com" class="btn-primary">Schedule Free Training</a>
-        <a href="#programs" class="btn-secondary">View Programs</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-number">100%</div>
-          <div class="hero-stat-label">Free Training</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">ALERRT</div>
-          <div class="hero-stat-label">Certified</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">24/7</div>
-          <div class="hero-stat-label">Support</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">Faith</div>
-          <div class="hero-stat-label">Based</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="section stats" id="stats">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Critical Data</div>
-        <h2 class="section-title">Threat Reality</h2>
-        <p class="section-description">FBI and DHS statistics that demand immediate action</p>
-      </div>
-      
-      <!-- First Responder Images -->
-      <div class="responder-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 60px;">
-        <div class="responder-image fade-in">
-          <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Police officers in tactical gear responding to emergency situation" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" onerror="this.src=''; this.alt='Police response image failed to load'; this.style.display='none';">
-        </div>
-        <div class="responder-image fade-in">
-          <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Police officers in tactical formation during emergency response training" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" onerror="this.src=''; this.alt='Police tactical response image failed to load'; this.style.display='none';">
-        </div>
-        <div class="responder-image fade-in">
-          <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Firefighters in full gear responding to emergency call" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" onerror="this.src=''; this.alt='Firefighter response image failed to load'; this.style.display='none';">
-        </div>
-        <div class="responder-image fade-in">
-          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Military personnel in uniform demonstrating leadership and discipline" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" onerror="this.src=''; this.alt='Military personnel image failed to load'; this.style.display='none';">
-        </div>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-card fade-in">
-          <span class="stat-icon">🚨</span>
-          <div class="stat-number" data-target="61">0</div>
-          <div class="stat-label">Active Shooter Incidents (2021)</div>
-          <div class="stat-source">FBI Active Shooter Report</div>
-        </div>
-        <div class="stat-card fade-in">
-          <span class="stat-icon">⏱️</span>
-          <div class="stat-number" data-target="50">0</div>
-          <div class="stat-label">% End Before Police Arrive</div>
-          <div class="stat-source">DHS Emergency Response Data</div>
-        </div>
-        <div class="stat-card fade-in">
-          <span class="stat-icon">💔</span>
-          <div class="stat-number" data-target="243">0</div>
-          <div class="stat-label">Total Casualties (2021)</div>
-          <div class="stat-source">FBI Uniform Crime Reporting</div>
-        </div>
-        <div class="stat-card fade-in">
-          <span class="stat-icon">📈</span>
-          <div class="stat-number" data-target="52">0</div>
-          <div class="stat-label">% Increase Since 2017</div>
-          <div class="stat-source">FBI Trend Analysis</div>
-        </div>
-        <div class="stat-card fade-in">
-          <span class="stat-icon">⛪</span>
-          <div class="stat-number" data-target="12">0</div>
-          <div class="stat-label">Religious Facility Attacks (2021)</div>
-          <div class="stat-source">FBI Hate Crime Statistics</div>
-        </div>
-        <div class="stat-card fade-in">
-          <span class="stat-icon">🏫</span>
-          <div class="stat-number" data-target="8">0</div>
-          <div class="stat-label">Educational Facility Incidents</div>
-          <div class="stat-source">K-12 School Shooting Database</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs Section -->
-  <section class="section programs" id="programs">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Training Programs</div>
-        <h2 class="section-title">Elite Instruction</h2>
-        <p class="section-description">Military-grade training adapted for civilian environments</p>
-      </div>
-      <div class="programs-grid">
-        <div class="program-card fade-in">
-          <h3 class="program-title">A.L.E.R.R.T.</h3>
-          <p class="program-description">Advanced Law Enforcement Rapid Response Training - The gold standard for active threat response, developed by Texas State University.</p>
-          <ul class="program-features">
-            <li>Nationally recognized certification</li>
-            <li>Research-based methodologies</li>
-            <li>Law enforcement approved</li>
-            <li>Proven effectiveness</li>
-          </ul>
-          <a href="https://www.alerrt.org" class="program-link">Learn More</a>
-        </div>
-        <div class="program-card fade-in">
-          <h3 class="program-title">C.R.A.S.E.</h3>
-          <p class="program-description">Civilian Response to Active Shooter Events - Comprehensive training for the critical minutes before law enforcement arrives.</p>
-          <ul class="program-features">
-            <li>Civilian-focused approach</li>
-            <li>Practical response techniques</li>
-            <li>Stress inoculation training</li>
-            <li>Community-based solutions</li>
-          </ul>
-          <a href="https://alerrt.org/CivilianResponse" class="program-link">Explore CRASE</a>
-        </div>
-        <div class="program-card fade-in">
-          <h3 class="program-title">Avoid, Deny, Defend</h3>
-          <p class="program-description">Simple, proven three-step strategy for surviving active threats. Easy to remember under stress and universally applicable.</p>
-          <ul class="program-features">
-            <li>Simple three-step process</li>
-            <li>Easy to remember under stress</li>
-            <li>Universally applicable</li>
-            <li>Immediate implementation</li>
-          </ul>
-          <a href="https://www.avoiddenydefend.org/" class="program-link">Visit Site</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Section -->
-  <section class="section mission" id="mission">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Our Purpose</div>
-        <h2 class="section-title">Our Sacred Mission</h2>
-        <p class="section-description">Empowering communities through faith-based safety training and emergency preparedness education</p>
-      </div>
-      
-      <!-- Church Image -->
-      <div class="mission-image fade-in" style="margin-bottom: 60px;">
-        <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Beautiful church sanctuary with wooden pews and stained glass windows" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);" onerror="this.src=''; this.alt='Church image failed to load'; this.style.display='none';">
-      </div>
-      <div class="mission-content">
-        <div class="mission-text slide-in-left">
-          <p>At Grace & Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training) and Citizen Response training.</p>
-          
-          <p>Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders' experiences—one as a United States Marine and the other as a Registered Nurse.</p>
-          
-          <p>Our Marine Corps background instills discipline, leadership, and a deep sense of duty, while our RN expertise brings a profound understanding of care, crisis management, and human resilience. Together, we leverage these strengths to deliver exceptional training, with a particular emphasis on our ALERRT Train-the-Trainer certification—a nationally recognized, research-based program trusted by law enforcement and civilians alike for its rigorous standards and proven effectiveness in preparing individuals to respond to critical incidents.</p>
-          
-          <p>We are passionate about serving our community by offering this training at no cost to churches and daycare facilities, ensuring that financial barriers do not prevent access to essential preparedness education. Our initial goal is to educate as many local organizations as possible, fostering safer environments where faith and care thrive. At Grace & Grit Defense Academy, we believe that serving others is a calling, and we are dedicated to building stronger, more resilient communities through education, empowerment, and unwavering commitment to the greater good.</p>
-        </div>
-        
-        <div class="founders-card slide-in-right">
-          <h3 class="founders-title">Meet Our Founders</h3>
-          <div class="founder">
-            <div class="founder-role">U.S. Marine Veteran</div>
-            <div class="founder-credentials">Combat Experience • Leadership Training • ALERRT Certified</div>
-            <div class="founder-description">Brings military discipline, tactical expertise, and proven leadership under pressure. Specialized in threat assessment and rapid response protocols.</div>
-          </div>
-          <div class="founder">
-            <div class="founder-role">Registered Nurse</div>
-            <div class="founder-credentials">Emergency Medicine • Crisis Management • Trauma Care</div>
-            <div class="founder-description">Provides medical expertise, crisis care knowledge, and deep understanding of human resilience in emergency situations.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="section features">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Why Choose Us</div>
-        <h2 class="section-title">Excellence in Every Detail</h2>
-        <p class="section-description">Combining faith-based values with professional expertise to deliver unmatched training quality</p>
-      </div>
-      
-      <!-- Daycare Images -->
-      <div class="target-audience-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
-        <div class="audience-image fade-in">
-          <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Children in daycare center classroom during learning activities" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);" onerror="this.src=''; this.alt='Daycare image failed to load'; this.style.display='none';">
-          <p style="text-align: center; margin-top: 15px; color: white; font-weight: 600;">Protecting Our Little Ones</p>
-        </div>
-        <div class="audience-image fade-in">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Church congregation during worship service with raised hands" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);" onerror="this.src=''; this.alt='Church congregation image failed to load'; this.style.display='none';">
-          <p style="text-align: center; margin-top: 15px; color: white; font-weight: 600;">Safeguarding Our Faith Community</p>
-        </div>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <div class="feature-icon">💰</div>
-          <h3 class="feature-title">Completely Free</h3>
-          <p class="feature-description">No cost to churches and daycare centers. We believe financial barriers should never prevent access to life-saving training.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feature-icon">🏆</div>
-          <h3 class="feature-title">ALERRT Certified</h3>
-          <p class="feature-description">Train-the-Trainer certification ensures the highest standards of instruction and proven methodologies.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feature-icon">✝️</div>
-          <h3 class="feature-title">Faith-Based Approach</h3>
-          <p class="feature-description">Training rooted in Christian values of compassion, service, and stewardship while maintaining professional standards.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feature-icon">🎖️</div>
-          <h3 class="feature-title">Military Precision</h3>
-          <p class="feature-description">Marine Corps discipline and leadership experience ensures thorough, professional, and effective training delivery.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feature-icon">🏥</div>
-          <h3 class="feature-title">Medical Expertise</h3>
-          <p class="feature-description">Registered Nurse background provides critical medical response knowledge and crisis management skills.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feature-icon">🤝</div>
-          <h3 class="feature-title">Community Focused</h3>
-          <p class="feature-description">Dedicated to building stronger, more resilient communities through education and empowerment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Success Stories</div>
-        <h2 class="section-title">Community Impact</h2>
-        <p class="section-description">Real testimonials from churches and daycare centers we've trained across our community</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">The ALERRT training gave our security team the confidence and clarity to respond effectively. The scenarios were realistic and the instructors' military background showed in every detail. It's a game-changer for community safety.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Pastor Michael Rodriguez</div>
-            <div class="testimonial-role">First Baptist Church, Austin TX</div>
-          </div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">CRASE taught us how to act, not freeze. The medical response training was invaluable - our nurse founder's expertise really showed. Every church should have this training before they need it.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Sarah Johnson, RN</div>
-            <div class="testimonial-role">Little Lambs Daycare Director</div>
-          </div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">Grace & Grit's approach combines professional expertise with genuine care for our community. The Marine discipline and nursing compassion create the perfect training environment. Highly recommended.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">David Martinez</div>
-            <div class="testimonial-role">Security Team Leader, Cornerstone Church</div>
-          </div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">The training was thorough yet accessible. Our entire staff felt prepared and confident after the session. The Christian foundation made it feel like family teaching family.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Rebecca Thompson</div>
-            <div class="testimonial-role">Grace Community Daycare</div>
-          </div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">Outstanding training that doesn't compromise on quality despite being free. The founders' dedication to serving the community is evident in every aspect of their program.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Pastor James Wilson</div>
-            <div class="testimonial-role">New Hope Fellowship</div>
-          </div>
-        </div>
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-content">The combination of tactical knowledge and medical expertise is unmatched. Our team learned not just how to respond, but how to care for others in crisis situations.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-name">Maria Gonzalez</div>
-            <div class="testimonial-role">St. Mary's Children's Center</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section cta">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Take Action</div>
-        <h2 class="section-title">Ready to Protect Your Community?</h2>
-        <p class="section-description">Don't wait for tragedy to strike. Schedule your free ALERRT training session today and give your community the tools they need to survive. Our expert instructors are standing by to serve your organization.</p>
-        <a href="mailto:graceandgrit43615@gmail.com" class="btn-primary">Schedule Free Training</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a></p>
-        <p>Emergency: <a href="tel:911">911</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Programs</h3>
-        <ul>
-          <li><a href="https://www.alerrt.org">ALERRT Training</a></li>
-          <li><a href="https://alerrt.org/CivilianResponse">CRASE Program</a></li>
-          <li><a href="https://www.avoiddenydefend.org/">Avoid, Deny, Defend</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Mission</h3>
-        <p>Elite safety training for churches and daycare centers. Founded by a U.S. Marine and Registered Nurse, providing ALERRT-certified instruction at no cost.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Certifications</h3>
-        <ul>
-          <li>ALERRT Train-the-Trainer Certified</li>
-          <li>U.S. Marine Corps Veteran</li>
-          <li>Registered Nurse</li>
-          <li>Emergency Response Specialist</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Grace & Grit Defense Academy. Elite training. Professional results.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile Menu Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const offsetTop = target.offsetTop - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Intersection Observer for Animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          
-          // Animate counters
-          if (entry.target.classList.contains('stat-card')) {
-            const numberElement = entry.target.querySelector('.stat-number');
-            const target = parseInt(numberElement.getAttribute('data-target'));
-            if (target && !isNaN(target)) {
-              animateCounter(numberElement, target);
-            }
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe all animated elements
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Counter Animation
-    function animateCounter(element, target, duration = 2000) {
-      let start = 0;
-      const increment = target / (duration / 16);
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-          element.textContent = target;
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(start);
-        }
-      }, 16);
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
+      .hero-stats {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Further adjusted minmax for better mobile view */
+        gap: 10px; /* Further reduced gap for better mobile view */
+        margin: 30px auto 0; /* Further reduced margin for better mobile view */
       }
-    });
 
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
-  </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c445e3a66e7542',t:'MTc1NDcxMTI1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+      .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Further adjusted minmax for better mobile view */
+        gap: 10px; /* Further reduced gap for better mobile view */
+      }
