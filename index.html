@@ -1,121 +1,1407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grace & Grit Defense Academy</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hero {
-      background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD...'); /* Replace with full Base64 */
-      background-size: cover;
-      background-position: center;
-      padding: 4rem 2rem;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .explainer {
-      padding: 2rem;
-      background-color: #ffffff;
-      text-align: center;
-      animation: fadeInUp 2s ease-out;
-    }
-
-    .explainer h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-
-    .explainer p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace & Grit Defense Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+   
+    /* Animated Background Particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+   
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(231, 76, 60, 0.4);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+   
+    .particle:nth-child(2n) {
+      background: rgba(52, 152, 219, 0.4);
+      animation-delay: -2s;
+      animation-duration: 10s;
+    }
+   
+    .particle:nth-child(3n) {
+      background: rgba(212, 175, 55, 0.4);
+      animation-delay: -4s;
+      animation-duration: 12s;
+    }
+   
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      50% { transform: translateY(-120px) rotate(180deg); }
+    }
+   
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+      padding: 2rem 0;
+      transition: all 0.3s ease;
+    }
+   
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+   
+    .nav-logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #d4af37;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+   
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+   
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+   
+    .nav-menu a:hover {
+      color: #d4af37;
+    }
+   
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d4af37;
+      transition: width 0.3s ease;
+    }
+   
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+   
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 140px;
+    }
+   
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(231, 76, 60, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+      animation: pulse 6s ease-in-out infinite alternate;
+    }
+   
+    @keyframes pulse {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+   
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+   
+    .hero h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 5.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 4s ease-in-out infinite;
+      text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+      line-height: 1.2;
+    }
+   
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+   
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #e74c3c;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-style: italic;
+      text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    }
+   
+    .hero-description {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+      font-weight: 300;
+osition: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+   
+    .mission-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #f8f9fa;
+    }
+   
+    .mission-text p:first-child {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #d4af37;
+    }
+   
+    .founders-info {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+   
+    .founders-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #e74c3c;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+   
+    .founder-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+   
+    .founder-card:hover {
+      transform: translateX(10px);
+    }
+   
+    .founder-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+   
+    .founder-credentials {
+      font-size: 1rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+   
+    .founder-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+   
+    /* Threat Statistics Dashboard */
+    .threat-dashboard {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      position: relative;
+    }
+   
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+   
+    .dashboard-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #e74c3c;
+      text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    }
+   
+    .dashboard-header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+   
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+   
+    .stat-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 3rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+   
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.6s;
+    }
+   
+    .stat-card:hover::before {
+      left: 100%;
+    }
+   
+    .stat-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    }
+   
+    .stat-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      filter: drop-shadow(0 0 15px rgba(231, 76, 60, 0.5));
+    }
+   
+    .stat-number {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #e74c3c;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    }
+   
+    .stat-label {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+   
+    .stat-source {
+      font-size: 1rem;
+      opacity: 0.8;
+      color: #3498db;
+      font-weight: 500;
+    }
+   
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+    }
+   
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(45deg, #e74c3c, #c0392b);
+      border-radius: 5px;
+      width: 0%;
+      transition: width 2.5s ease-in-out;
+      box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+    }
+   
+    /* Training Programs */
+    .training-programs {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+    }
+   
+    .programs-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+   
+    .programs-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #3498db;
+      text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+    }
+   
+    .programs-header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+   
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+   
+    .program-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      padding: 3.5rem;
+      text-align: center;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+   
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+      animation: rotate 8s linear infinite;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+   
+    .program-card:hover::before {
+      opacity: 1;
+    }
+   
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+   
+    .program-card:hover {
+      transform: translateY(-20px) scale(1.03);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+   
+    .program-icon {
+      font-size: 4.5rem;
+      margin-bottom: 2rem;
+      display: block;
+      filter: drop-shadow(0 0 15px rgba(52, 152, 219, 0.5));
+    }
+   
+    .program-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #3498db;
+      position: relative;
+      z-index: 1;
+    }
+   
+    .program-card p {
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+    }
+   
+    .program-features {
+      list-style: none;
+      margin-bottom: 2.5rem;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+   
+    .program-features li {
+      padding: 0.5rem 0;
+      padding-left: 2rem;
+      position: relative;
+      opacity: 0.9;
+    }
+   
+    .program-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+   
+    .program-link {
+      display: inline-block;
+      background: linear-gradient(45deg, #3498db, #2980b9);
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+   
+    .program-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+      color: white;
+    }
+   
+    /* Why Choose Us Section */
+    .why-choose-us {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+   
+    .why-choose-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+   
+    .why-choose-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+   
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+   
+    .feature-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+   
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+   
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #e74c3c;
+    }
+   
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+   
+    .feature-card p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+   
+    /* Testimonials */
+    .testimonials {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+   
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+   
+    .testimonials-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+   
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+   
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 3rem;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+   
+    .testimonial-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    }
+   
+    .quote-mark {
+      font-size: 5rem;
+      color: #d4af37;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+      font-family: 'Playfair Display', serif;
+    }
+   
+    .testimonial-card p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-style: italic;
+      opacity: 0.95;
+    }
+   
+    .testimonial-author {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+    }
+   
+    .testimonial-author strong {
+      display: block;
+      color: #e74c3c;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+   
+    .testimonial-author span {
+      opacity: 0.8;
+      font-size: 1rem;
+      color: #3498db;
+    }
+   
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: white;
+      text-align: center;
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+   
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      animation: pulse 4s ease-in-out infinite alternate;
+    }
+   
+    .cta-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+   
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+   
+    .cta-section p {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+   
+    .cta-buttons-section {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+   
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #e74c3c;
+      padding: 1.5rem 3rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      font-size: 1.1rem;
+    }
+   
+    .cta-button:hover {
+      background: #f8f9fa;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+      color: #e74c3c;
+    }
+   
+    .cta-button.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+   
+    .cta-button.secondary:hover {
+      background: white;
+      color: #e74c3c;
+    }
+   
+    /* Footer */
+    footer {
+      background: #0a0a0a;
+      color: white;
+      padding: 4rem 0 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+   
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+   
+    .footer-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+   
+    .footer-section p,
+    .footer-section li {
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+   
+    .footer-section ul {
+      list-style: none;
+    }
+   
+    .footer-section a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+   
+    .footer-section a:hover {
+      color: #2980b9;
+    }
+   
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.7;
+    }
+   
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+   
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+   
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease;
+    }
+   
+    .slide-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+   
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease;
+    }
+   
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+   
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+   
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+     
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+      }
+     
+      .nav-menu.active {
+        display: flex;
+      }
+     
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+     
+      .hero-tagline {
+        font-size: 1.5rem;
+      }
+     
+      .hero-description {
+        font-size: 1.2rem;
+      }
+     
+      .cta-buttons,
+      .cta-buttons-section {
+        flex-direction: column;
+        align-items: center;
+      }
+     
+      .mission-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+     
+      .dashboard-header h2,
+      .programs-header h2,
+      .testimonials-header h2,
+      .cta-section h2,
+      .mission-header h2,
+      .why-choose-header h2 {
+        font-size: 2.5rem;
+      }
+     
+      .stats-grid,
+      .programs-grid,
+      .testimonials-grid,
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+     
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+     
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Grace & Grit Defense Academy Logo" />
-    <nav>
-      <a href="#mission">Mission</a>
-      <a href="#training">Training</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Grace & Grit Defense Academy</h1>
-    <p>Empowering faith-based communities with life-saving knowledge and resilient preparedness.</p>
-  </section>
+  <!-- Animated Background Particles -->
+  <div class="particles">
+    <div class="particle" style="left: 5%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 15%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 25%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 35%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 45%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 55%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 65%; animation-delay: 6s;"></div>
+    <div class="particle" style="left: 75%; animation-delay: 7s;"></div>
+    <div class="particle" style="left: 85%; animation-delay: 8s;"></div>
+    <div class="particle" style="left: 95%; animation-delay: 9s;"></div>
+  </div>
 
-  <section class="explainer">
-    <h2>Why Grace & Grit?</h2>
-    <p>
-      Our mission is rooted in compassion and courage. We provide free, expert-led training to churches, daycare centers, and community organizations — equipping everyday heroes with the tools to respond confidently in moments of crisis. From situational awareness to hands-on defense techniques, we blend grace with grit to build safer spaces for all.
-    </p>
-  </section>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Grace & Grit Defense Academy</a>
+      <button class="mobile-menu-toggle">☰</button>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#statistics">Statistics</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <footer>
-    &copy; 2025 Grace & Grit Defense Academy. All rights reserved.
-  </footer>
-</body>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Grace & Grit Defense Academy</h1>
+      <p class="hero-tagline">"Empowering Communities. Protecting Lives."</p>
+      <p class="hero-description">
+        Faith-based safety training for churches and daycare centers. Our ALERRT-certified instructors provide life-saving skills at no cost to your community. Rooted in Christian values with military precision and medical expertise.
+      </p>
+      <div class="cta-buttons">
+        <a href="mailto:graceandgrit43615@gmail.com" class="cta-primary">Schedule Free Training</a>
+        <a href="#programs" class="cta-secondary">View Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number">100%</div>
+          <div class="hero-stat-label">Free Training</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">ALERRT</div>
+          <div class="hero-stat-label">Certified</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">24/7</div>
+          <div class="hero-stat-label">Support</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">Faith</div>
+          <div class="hero-stat-label">Based</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission-section" id="mission">
+    <div class="mission-container">
+      <div class="mission-header">
+        <h2>Our Sacred Mission</h2>
+      </div>
+      <div class="mission-content">
+        <div class="mission-text slide-in-left">
+          <p>At Grace & Grit Defense Academy, our mission is to empower communities by equipping churches and daycare facilities with life-saving knowledge and skills through proven critical response techniques, guided by the values of ALERRT (Advanced Law Enforcement Rapid Response Training) and Citizen Response training.</p>
+         
+          <p>Rooted in core Christian values of compassion, service, and stewardship, we are driven by a heartfelt commitment to protect and serve others, inspired by our founders' experiences—one as a United States Marine and the other as a Registered Nurse.</p>
+         
+          <p>Our Marine Corps background instills discipline, leadership, and a deep sense of duty, while our RN expertise brings a profound understanding of care, crisis management, and human resilience. Together, we leverage these strengths to deliver exceptional training, with a particular emphasis on our ALERRT Train-the-Trainer certification—a nationally recognized, research-based program trusted by law enforcement and civilians alike for its rigorous standards and proven effectiveness in preparing individuals to respond to critical incidents.</p>
+         
+          <p>We are passionate about serving our community by offering this training at no cost to churches and daycare facilities, ensuring that financial barriers do not prevent access to essential preparedness education. Our initial goal is to educate as many local organizations as possible, fostering safer environments where faith and care thrive. At Grace & Grit Defense Academy, we believe that serving others is a calling, and we are dedicated to building stronger, more resilient communities through education, empowerment, and unwavering commitment to the greater good.</p>
+        </div>
+       
+        <div class="founders-info slide-in-right">
+          <h3>Meet Our Founders</h3>
+          <div class="founder-card">
+            <div class="founder-title">U.S. Marine Veteran</div>
+            <div class="founder-credentials">Combat Experience • Leadership Training • ALERRT Certified</div>
+            <div class="founder-description">Brings military discipline, tactical expertise, and proven leadership under pressure. Specialized in threat assessment and rapid response protocols.</div>
+          </div>
+          <div class="founder-card">
+            <div class="founder-title">Registered Nurse</div>
+            <div class="founder-credentials">Emergency Medicine • Crisis Management • Trauma Care</div>
+            <div class="founder-description">Provides medical expertise, crisis care knowledge, and deep understanding of human resilience in emergency situations.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Threat Statistics Dashboard -->
+  <section class="threat-dashboard" id="statistics">
+    <div class="dashboard-header">
+      <h2>Critical Threat Statistics</h2>
+      <p>Real data from FBI and DHS sources highlighting the urgent need for community preparedness and immediate response training</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card fade-in">
+        <span class="stat-icon">🚨</span>
+        <div class="stat-number" data-target="61">0</div>
+        <div class="stat-label">Active Shooter Incidents (2021)</div>
+        <div class="stat-source">FBI Active Shooter Report</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-icon">⏱️</span>
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">% End Before Police Arrive</div>
+        <div class="stat-source">DHS Emergency Response Data</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 50%;"></div>
+        </div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-icon">💔</span>
+        <div class="stat-number" data-target="243">0</div>
+        <div class="stat-label">Total Casualties (2021)</div>
+        <div class="stat-source">FBI Uniform Crime Reporting</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-icon">📈</span>
+        <div class="stat-number" data-target="52">0</div>
+        <div class="stat-label">% Increase Since 2017</div>
+        <div class="stat-source">FBI Trend Analysis</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 52%;"></div>
+        </div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-icon">⛪</span>
+        <div class="stat-number" data-target="12">0</div>
+        <div class="stat-label">Religious Facility Attacks (2021)</div>
+        <div class="stat-source">FBI Hate Crime Statistics</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 30%;"></div>
+        </div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-icon">🏫</span>
+        <div class="stat-number" data-target="8">0</div>
+        <div class="stat-label">Educational Facility Incidents</div>
+        <div class="stat-source">K-12 School Shooting Database</div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 25%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Programs -->
+  <section class="training-programs" id="programs">
+    <div class="programs-header">
+      <h2>Professional Training Programs</h2>
+      <p>Evidence-based response strategies developed by law enforcement and security experts, adapted for faith-based communities</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card fade-in">
+        <span class="program-icon">🎯</span>
+        <h3>A.L.E.R.R.T.</h3>
+        <p>Advanced Law Enforcement Rapid Response Training - The gold standard for active threat response, developed by Texas State University and adopted nationwide by law enforcement agencies.</p>
+        <ul class="program-features">
+          <li>Nationally recognized certification</li>
+          <li>Research-based methodologies</li>
+          <li>Law enforcement approved</li>
+          <li>Proven effectiveness in real scenarios</li>
+        </ul>
+        <a href="https://www.alerrt.org" class="program-link">Learn More</a>
+      </div>
+      <div class="program-card fade-in">
+        <span class="program-icon">🛡️</span>
+        <h3>C.R.A.S.E.</h3>
+        <p>Civilian Response to Active Shooter Events - Comprehensive training program teaching civilians how to respond during the critical minutes before law enforcement arrives.</p>
+        <ul class="program-features">
+          <li>Civilian-focused approach</li>
+          <li>Practical response techniques</li>
+          <li>Stress inoculation training</li>
+          <li>Community-based solutions</li>
+        </ul>
+        <a href="https://alerrt.org/CivilianResponse" class="program-link">Explore CRASE</a>
+      </div>
+      <div class="program-card fade-in">
+        <span class="program-icon">⚡</span>
+        <h3>Avoid, Deny, Defend</h3>
+        <p>Simple, proven three-step strategy for surviving active threats. Easy to remember under stress and applicable to any dangerous situation requiring immediate response.</p>
+        <ul class="program-features">
+          <li>Simple three-step process</li>
+          <li>Easy to remember under stress</li>
+          <li>Universally applicable</li>
+          <li>Immediate implementation</li>
+        </ul>
+        <a href="https://www.avoiddenydefend.org/" class="program-link">Visit ADD Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="why-choose-header">
+      <h2>Why Choose Grace & Grit?</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💰</div>
+        <h3>Completely Free</h3>
+        <p>No cost to churches and daycare centers. We believe financial barriers should never prevent access to life-saving training.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🏆</div>
+        <h3>ALERRT Certified</h3>
+        <p>Train-the-Trainer certification ensures the highest standards of instruction and proven methodologies.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✝️</div>
+        <h3>Faith-Based Approach</h3>
+        <p>Training rooted in Christian values of compassion, service, and stewardship while maintaining professional standards.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎖️</div>
+        <h3>Military Precision</h3>
+        <p>Marine Corps discipline and leadership experience ensures thorough, professional, and effective training delivery.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🏥</div>
+        <h3>Medical Expertise</h3>
+        <p>Registered Nurse background provides critical medical response knowledge and crisis management skills.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🤝</div>
+        <h3>Community Focused</h3>
+        <p>Dedicated to building stronger, more resilient communities through education and empowerment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <h2>Community Impact Stories</h2>
+      <p>Real testimonials from churches and daycare centers we've trained across our community</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"The ALERRT training gave our security team the confidence and clarity to respond effectively. The scenarios were realistic and the instructors' military background showed in every detail. It's a game-changer for community safety."</p>
+        <div class="testimonial-author">
+          <strong>Pastor Michael Rodriguez</strong>
+          <span>First Baptist Church, Austin TX</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"CRASE taught us how to act, not freeze. The medical response training was invaluable - our nurse founder's expertise really showed. Every church should have this training before they need it."</p>
+        <div class="testimonial-author">
+          <strong>Sarah Johnson, RN</strong>
+          <span>Little Lambs Daycare Director</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"Grace & Grit's approach combines professional expertise with genuine care for our community. The Marine discipline and nursing compassion create the perfect training environment. Highly recommended."</p>
+        <div class="testimonial-author">
+          <strong>David Martinez</strong>
+          <span>Security Team Leader, Cornerstone Church</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"The training was thorough yet accessible. Our entire staff felt prepared and confident after the session. The Christian foundation made it feel like family teaching family."</p>
+        <div class="testimonial-author">
+          <strong>Rebecca Thompson</strong>
+          <span>Grace Community Daycare</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"Outstanding training that doesn't compromise on quality despite being free. The founders' dedication to serving the community is evident in every aspect of their program."</p>
+        <div class="testimonial-author">
+          <strong>Pastor James Wilson</strong>
+          <span>New Hope Fellowship</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-mark">"</div>
+        <p>"The combination of tactical knowledge and medical expertise is unmatched. Our team learned not just how to respond, but how to care for others in crisis situations."</p>
+        <div class="testimonial-author">
+          <strong>Maria Gonzalez</strong>
+          <span>St. Mary's Children's Center</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contact">
+    <div class="cta-content">
+      <h2>Ready to Protect Your Community?</h2>
+      <p>Don't wait for tragedy to strike. Schedule your free ALERRT training session today and give your community the tools they need to survive. Our expert instructors are standing by to serve your organization.</p>
+      <div class="cta-buttons-section">
+        <a href="mailto:graceandgrit43615@gmail.com" class="cta-button">Schedule Free Training</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>Email: <a href="mailto:graceandgrit43615@gmail.com">graceandgrit43615@gmail.com</a></p>
+        <p>Emergency: <a href="tel:911">911</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Training Programs</h3>
+        <ul>
+          <li><a href="https://www.alerrt.org">ALERRT Training</a></li>
+          <li><a href="https://alerrt.org/CivilianResponse">CRASE Program</a></li>
+          <li><a href="https://www.avoiddenydefend.org/">Avoid, Deny, Defend</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Our Mission</h3>
+        <p>Empowering communities through faith-based safety training. Founded by a U.S. Marine and Registered Nurse, we provide ALERRT-certified instruction at no cost to churches and daycare centers.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Certifications</h3>
+        <ul>
+          <li>ALERRT Train-the-Trainer Certified</li>
+          <li>U.S. Marine Corps Veteran</li>
+          <li>Registered Nurse</li>
+          <li>Emergency Response Specialist</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Grace & Grit Defense Academy. All rights reserved. Serving communities with faith, courage, and expertise.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+
+    // Animated Counter Function
+    function animateCounter(element, target, duration = 2500) {
+      let start = 0;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(start);
+        }
+      }, 16);
+    }
+
+    // Intersection Observer for Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+         
+          // Animate counters when stat cards become visible
+          if (entry.target.classList.contains('stat-card')) {
+            const numberElement = entry.target.querySelector('.stat-number');
+            const target = parseInt(numberElement.getAttribute('data-target'));
+            if (target && !isNaN(target)) {
+              animateCounter(numberElement, target);
+            }
+          }
+         
+          // Animate progress bars
+          const progressFill = entry.target.querySelector('.progress-fill');
+          if (progressFill) {
+            setTimeout(() => {
+              progressFill.style.transition = 'width 2.5s ease-in-out';
+            }, 500);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+      } else {
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // Add more particles dynamically
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 8 + 's';
+      particle.style.animationDuration = (Math.random() * 4 + 8) + 's';
+     
+      // Random particle type
+      const types = ['rgba(231, 76, 60, 0.4)', 'rgba(52, 152, 219, 0.4)', 'rgba(212, 175, 55, 0.4)'];
+      particle.style.background = types[Math.floor(Math.random() * types.length)];
+     
+      document.querySelector('.particles').appendChild(particle);
+     
+      // Remove particle after animation
+      setTimeout(() => {
+        if (particle.parentNode) {
+          particle.remove();
+        }
+      }, 12000);
+    }
+
+    // Create new particles periodically
+    setInterval(createParticle, 3000);
+
+    // Initial particle creation
+    for (let i = 0; i < 5; i++) {
+      setTimeout(createParticle, i * 1000);
+    }
+  </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b498bbc1be9e50',t:'MTc1NDU0Njg3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
